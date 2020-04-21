@@ -1,0 +1,17 @@
+application:
+	mapping:
+		*: Wavevision\PosobotaExamples\*Module\Presenters\*Presenter
+
+session:
+	autoStart: true
+	debugger: true
+	expiration: 14 days
+
+services:
+	router: Wavevision\PosobotaExamples\Router\RouterFactory::createRouter
+
+includes:
+	# - services.neon
+	- translation.neon
+	- webpack.neon
+

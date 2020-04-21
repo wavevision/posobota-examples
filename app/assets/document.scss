@@ -1,0 +1,26 @@
+.document,
+.document__body {
+  display: flex;
+  flex-flow: column;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.document {
+  min-height: 100%;
+}
+
+.document__body,
+.document__content {
+  flex: 1;
+}
+
+.document__content {
+  align-items: stretch;
+  display: flex;
+  position: relative;
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="PosobotaExamples">
+  <rule ref="vendor/wavevision/coding-standard/php/WavevisionCodingStandard/ruleset.xml"/>
+  <rule ref="SlevomatCodingStandard.Files.TypeNameMatchesFileName">
+    <properties>
+      <property name="rootNamespaces" type="array">
+        <element key="app/PosobotaExamples" value="Wavevision\PosobotaExamples"/>
+        <element key="tests/PosobotaExamplesTests" value="Wavevision\PosobotaExamplesTests"/>
+      </property>
+    </properties>
+  </rule>
+</ruleset>

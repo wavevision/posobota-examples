@@ -1,0 +1,56 @@
+{
+  "name": "wavevision/posobota-examples",
+  "description": "Source codes for Posobota live stream.",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Wavevision s.r.o.",
+      "email": "info@wavevision.com"
+    },
+    {
+      "name": "Jakub Filla",
+      "email": "jakub.filla@wavevision.com"
+    },
+    {
+      "name": "Vít Rozsíval",
+      "email": "vit@wavevision.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "Wavevision\\": "app/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Wavevision\\PosobotaExamplesTests\\": "tests/PointTests/"
+    }
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    },
+    "sort-packages": true
+  },
+  "require": {
+    "nette/application": "^3.0",
+    "nette/bootstrap": "^3.0",
+    "wavevision/namespace-translator": "^0.2.2",
+    "wavevision/nette-webpack": "^0.7.0",
+    "wavevision/props-control": "^5.0",
+    "wavevision/utils": "^2.9"
+  },
+  "require-dev": {
+    "php-parallel-lint/php-console-highlighter": "^0.4.0",
+    "php-parallel-lint/php-parallel-lint": "^1.2",
+    "phpstan/extension-installer": "^1.0",
+    "phpstan/phpstan": "^0.12.19",
+    "phpstan/phpstan-nette": "^0.12.6",
+    "wavevision/coding-standard": "^4.0",
+    "wavevision/di-service-annotation": "^4.0"
+  },
+  "extra": {
+    "phpstan": {}
+  }
+}

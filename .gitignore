@@ -1,0 +1,11 @@
+*.log
+/.eslintcache
+/.idea/**
+!/.idea/codeStyles
+!/.idea/codeStyles/codeStyleConfig.xml
+!/.idea/codeStyles/Project.xml
+/.phpunit.result.cache
+/app/config/local.neon
+/node_modules
+/vendor
+/www/dist

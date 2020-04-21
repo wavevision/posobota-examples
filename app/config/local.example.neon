@@ -1,0 +1,4 @@
+# Optionally change some defaults
+webpack:
+	devServer:
+		enabled: %debugMode%

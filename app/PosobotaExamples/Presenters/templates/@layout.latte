@@ -1,0 +1,16 @@
+{varType string $locale}
+{varType string $title}
+
+<!DOCTYPE html>
+<html lang="{$locale}">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<title>{$title} | Wavevision Posobota Examples</title>
+	{control assets:styles}
+</head>
+<body>
+{include content}
+{control assets:scripts}
+</body>
+</html>
