@@ -4,10 +4,14 @@ import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { optimize } from 'webpack';
 
 import makeConfig from './webpack.config';
+import { helper } from './utils';
 
 export default makeConfig({
   mode: 'production',
   devtool: 'source-map',
+  output: {
+    path: helper.getOutputPath(),
+  },
   optimization: {
     minimizer: [
       new OptimizeCssAssetsPlugin({
