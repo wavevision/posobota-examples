@@ -13,9 +13,9 @@ export const helper = new WebpackHelper({
 
 export const makeEntry = (): Entry => {
   const entries: Entry = {};
+  const devServerUrl = helper.getDevServerUrl();
   for (const entry of helper.getEnabledEntries()) {
     const base = [resolve(ROOT, 'app', 'assets', `${entry}.ts`)];
-    const devServerUrl = helper.getDevServerUrl();
     entries[entry] = DEV
       ? [`webpack-dev-server/client?${devServerUrl.href}`, ...base]
       : base;
