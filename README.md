@@ -8,3 +8,23 @@ Source codes for [Posobota live stream talk](https://www.youtube.com/watch?v=i7a
 👤 **Authors:** [Jakub Filla](https://github.com/jfilla), [Vít Rozsíval](https://github.com/rozsival)
 <br>
 🗓 **Date:** 2020/04/25
+
+## Installation
+
+```bash
+git clone git@github.com:wavevision/posobota-examples.git
+nvm install
+# TODO: make init
+```
+
+Use `app/config/local.neon` to customize your setup.
+
+## Development
+
+```bash
+yarn dev
+# or
+npm run dev
+```
+
+Navigate your browser to `www` dir.
