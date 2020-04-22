@@ -1,9 +1,12 @@
 app=app
 bin=vendor/bin
+config_app=$(app)/config/local.neon
+config_example=$(app)/config/local.example.neon
 codeSnifferRuleset=codesniffer-ruleset.xml
 dirs:=$(app)
 php=php
 temp=temp
+yarn:=$(shell command -v yarn 2>/dev/null)
 
 all:
 	 @$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
@@ -13,16 +16,29 @@ all:
 autoload:
 	composer dump-autoload
 
-build: composer yarn yarn_build
+build: composer npm npm_build
 
 composer:
 	composer install
 
-yarn:
-	yarn install
+config:
+	cp -n $(config_example) $(config_app)
 
-yarn_build:
-	yarn build
+init: build config
+	@echo "Done! Navigate your browser to 'www' folder."
+
+npm:
+ifndef yarn
+	npm $(script)
+else
+	yarn $(script)
+endif
+
+npm_install:
+	$(MAKE) script=install npm
+
+npm_build:
+	$(MAKE) script='run build' npm
 
 rm-cache:
 	rm -rf $(temp)/cache

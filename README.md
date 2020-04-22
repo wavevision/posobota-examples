@@ -14,17 +14,15 @@ Source codes for [Posobota live stream talk](https://www.youtube.com/watch?v=i7a
 ```bash
 git clone git@github.com:wavevision/posobota-examples.git
 nvm install
-# TODO: make init
+make init
 ```
 
-Use `app/config/local.neon` to customize your setup.
-
 ## Development
+
+Use `app/config/local.neon` to customize your setup. Then, start `webpack-dev-server`.
 
 ```bash
 yarn dev
 # or
 npm run dev
 ```
-
-Navigate your browser to `www` dir.
