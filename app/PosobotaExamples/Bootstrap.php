@@ -14,6 +14,7 @@ final class Bootstrap
 	public static function boot(): Configurator
 	{
 		$configurator = self::createConfigurator();
+		//$configurator->setDebugMode(false);
 		$configurator->enableTracy(self::rootDir()->string('log'));
 		$configurator->addConfig(self::configDir()->string('local.neon'));
 		return $configurator;
