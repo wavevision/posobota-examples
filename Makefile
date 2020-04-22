@@ -29,7 +29,7 @@ di: reset
 
 fix: check-syntax phpcbf phpcs phpstan
 
-init: build config
+init: nvm build config
 	@echo "Done! Navigate your browser to 'www' folder."
 
 npm:
@@ -44,6 +44,9 @@ npm_install:
 
 npm_build:
 	$(MAKE) script='run build' npm
+
+nvm:
+	source ${NVM_DIR}/nvm.sh && nvm install
 
 reset: rm-cache autoload
 

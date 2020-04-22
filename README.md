@@ -15,7 +15,6 @@ PHP 7.4 is required.
 
 ```bash
 git clone git@github.com:wavevision/posobota-examples.git
-nvm install
 make init
 ```
 
