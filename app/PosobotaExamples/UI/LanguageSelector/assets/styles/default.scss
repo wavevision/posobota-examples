@@ -1,0 +1,27 @@
+$flag-size: 1.5em;
+
+.language-selector {
+  display: flex;
+  margin: auto;
+
+  &__language {
+    margin: 0.25em 0.5em;
+    text-transform: uppercase;
+  }
+
+  .flag {
+    display: inline-block;
+    height: $flag-size;
+    margin-right: 0.25em;
+    width: $flag-size;
+  }
+}
+
+.language-selector__iso {
+  align-items: center;
+  display: flex;
+
+  &--current {
+    font-weight: bold;
+  }
+}

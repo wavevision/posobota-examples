@@ -1,16 +1,18 @@
+{varType Wavevision\PropsControl\Helpers\ClassName $documentClassName}
 {varType string $locale}
-{varType string $title}
 
 <!DOCTYPE html>
-<html lang="{$locale}">
+<html n:class="$documentClassName->block()" lang="{$locale}">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-	<title>{$title} | Wavevision Posobota Examples</title>
+	<title>Wavevision Posobota Examples</title>
 	{control assets:styles}
 </head>
-<body>
-{include content}
+<body n:class="$documentClassName->element('body')">
+<div n:class="$documentClassName->element('content')">
+	<div class="container" n:inner-block="content"></div>
+</div>
 {control assets:scripts}
 </body>
 </html>

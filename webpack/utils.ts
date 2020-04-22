@@ -15,8 +15,9 @@ export const makeEntry = (): Entry => {
   const entries: Entry = {};
   for (const entry of helper.getEnabledEntries()) {
     const base = [resolve(ROOT, 'app', 'assets', `${entry}.ts`)];
+    const devServerUrl = helper.getDevServerUrl();
     entries[entry] = DEV
-      ? [`webpack-dev-server/client?${helper.getDevServerUrl().href}`, ...base]
+      ? [`webpack-dev-server/client?${devServerUrl.href}`, ...base]
       : base;
   }
   return entries;

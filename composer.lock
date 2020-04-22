@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6541881d9727c03db15df4d4feced15f",
+    "content-hash": "226a5a9209ab391f0769a0726179362d",
     "packages": [
         {
             "name": "contributte/translation",
@@ -1461,6 +1461,62 @@
                 "profiler"
             ],
             "time": "2020-04-11T17:26:33+00:00"
+        },
+        {
+            "name": "wavevision/latte-filters",
+            "version": "1.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wavevision/latte-filters.git",
+                "reference": "392507468fbb6720fc5ef64eddf249905d33bde2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wavevision/latte-filters/zipball/392507468fbb6720fc5ef64eddf249905d33bde2",
+                "reference": "392507468fbb6720fc5ef64eddf249905d33bde2",
+                "shasum": ""
+            },
+            "require": {
+                "nette/http": "^3.0",
+                "php": ">=7.4",
+                "wavevision/utils": "^2.1"
+            },
+            "require-dev": {
+                "jakub-onderka/php-parallel-lint": "^1.0",
+                "phing/phing": "^3.0.0a3",
+                "php-coveralls/php-coveralls": "^2.1",
+                "phpstan/phpstan": "^0.12.3",
+                "phpunit/phpunit": "^8.5",
+                "wavevision/coding-standard": "^3.1",
+                "wavevision/di-service-annotation": "^3.0",
+                "wavevision/nette-tests": "^2.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Wavevision\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Wavevision s.r.o.",
+                    "email": "info@wavevision.com"
+                },
+                {
+                    "name": "Jakub Filla",
+                    "email": "jakub.filla@wavevision.com"
+                },
+                {
+                    "name": "Vít Rozsíval",
+                    "email": "vit@wavevision.com"
+                }
+            ],
+            "description": "Extra filters for Latte template engine.",
+            "time": "2020-03-13T11:38:02+00:00"
         },
         {
             "name": "wavevision/namespace-translator",

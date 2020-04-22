@@ -15,13 +15,16 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.4.1"
+    "@wavevision/ts-utils": "^0.4.2",
+    "bootstrap": "^4.4.1",
+    "svgxuse": "^1.2.6"
   },
   "devDependencies": {
     "@types/mini-css-extract-plugin": "^0.9.1",
     "@types/node": "12",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/stylelint-webpack-plugin": "^0.1.5",
+    "@types/svg-sprite-loader": "^3.9.1",
     "@types/terser-webpack-plugin": "^2.2.0",
     "@types/webpack": "^4.41.12",
     "@types/webpack-dev-server": "^3.10.1",
@@ -30,6 +33,7 @@
     "@typescript-eslint/parser": "^2.29.0",
     "@wavevision/coding-standard": "^4.0.0",
     "@wavevision/nette-webpack": "^0.7.0",
+    "@wavevision/sprites-constants-generator-plugin": "^4.0.2",
     "cache-loader": "^4.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "cross-env": "^7.0.2",
@@ -37,6 +41,7 @@
     "deepmerge": "^4.2.2",
     "eslint": "^6.8.0",
     "eslint-loader": "^4.0.0",
+    "image-webpack-loader": "^6.0.0",
     "mini-css-extract-plugin": "^0.9.0",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
@@ -45,6 +50,7 @@
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
     "stylelint-webpack-plugin": "^1.2.3",
+    "svg-sprite-loader": "^4.2.5",
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^7.0.1",
     "ts-node": "^8.9.0",

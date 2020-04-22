@@ -11,7 +11,8 @@ services:
 	router: Wavevision\PosobotaExamples\Router\RouterFactory::createRouter
 
 includes:
-	# - services.neon
+	- %vendorDir%/wavevision/latte-filters/config/common.neon
+	- services.neon
 	- translation.neon
 	- webpack.neon
-
+	- ui.neon

@@ -1,8 +1,8 @@
 <?php declare (strict_types = 1);
 
-namespace Wavevision\PosobotaExamples\Presenters\Translations;
+namespace Wavevision\PosobotaExamples\UI\AppTitle\Translations;
 
-class En extends Translation
+class Cs extends Translation
 {
 
 	/**
@@ -11,7 +11,7 @@ class En extends Translation
 	public static function define(): array
 	{
 		return [
-			self::TITLE => 'Welcome!',
+			self::CONTENT => 'Vítejte!',
 		];
 	}
 

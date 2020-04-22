@@ -10,6 +10,7 @@ export default makeConfig({
   mode: 'production',
   devtool: 'source-map',
   output: {
+    filename: '[name].[hash].js',
     path: helper.getOutputPath(),
   },
   optimization: {

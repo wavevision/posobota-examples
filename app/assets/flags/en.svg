@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="22px" height="16px" viewBox="0 0 22 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 62 (91390) - https://sketch.com -->
+    <title>wvPoint Style/EN</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="20" height="14" rx="2"></rect>
+    </defs>
+    <g id="wvPoint-Style/EN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="GB" transform="translate(1.000000, 1.000000)">
+            <mask id="mask-2" fill="white">
+                <use xlink:href="#path-1"></use>
+            </mask>
+            <rect stroke="#93A4AD" x="-0.5" y="-0.5" width="21" height="15" rx="2"></rect>
+            <rect id="Mask-Copy" fill="#0A17A7" mask="url(#mask-2)" x="0" y="0" width="20" height="14"></rect>
+            <path d="M20.9160494,-1.34151236 L21.9811788,0.206024441 L15.2328212,4.66648764 L20,4.66666667 L20,9.33333333 L15.2318212,9.33248764 L21.9811788,13.7939756 L20.9160494,15.3415124 L12.3808212,9.69948764 L12.3809524,14.9333333 L7.61904762,14.9333333 L7.61882123,9.69948764 L-0.916049427,15.3415124 L-1.98117877,13.7939756 L4.76782123,9.33248764 L4.4408921e-16,9.33333333 L4.4408921e-16,4.66666667 L4.76682123,4.66648764 L-1.98117877,0.206024441 L-0.916049427,-1.34151236 L7.61882123,4.30048764 L7.61904762,-0.933333333 L12.3809524,-0.933333333 L12.3808212,4.30048764 L20.9160494,-1.34151236 Z" id="Rectangle-2" fill="#FFFFFF" mask="url(#mask-2)"></path>
+            <line x1="13.3342634" y1="4.43253581" x2="22.3809524" y2="-1.4" id="Line" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)"></line>
+            <line x1="14.2948405" y1="14.9452393" x2="22.404727" y2="9.58825684" id="Line-Copy-2" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)" transform="translate(18.349784, 12.266748) scale(1, -1) translate(-18.349784, -12.266748) "></line>
+            <line x1="5.71823847" y1="4.41732585" x2="-2.7410598" y2="-1.16968587" id="Line-Copy" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)"></line>
+            <line x1="6.63574219" y1="15.6173258" x2="-2.7410598" y2="9.52342936" id="Line-Copy-3" stroke="#DB1F35" stroke-width="0.666666667" stroke-linecap="round" mask="url(#mask-2)" transform="translate(1.947341, 12.570378) scale(1, -1) translate(-1.947341, -12.570378) "></line>
+            <polygon id="Rectangle-2-Copy-3" fill="#E6273E" mask="url(#mask-2)" points="0 8.4 8.57142857 8.4 8.57142857 14 11.4285714 14 11.4285714 8.4 20 8.4 20 5.6 11.4285714 5.6 11.4285714 0 8.57142857 0 8.57142857 5.6 0 5.6"></polygon>
+        </g>
+    </g>
+</svg>

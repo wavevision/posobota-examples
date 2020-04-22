@@ -1,0 +1,10 @@
+# Generated file, do not modify directly!
+services:
+	- implement: Wavevision\PosobotaExamples\UI\AppTitle\ControlFactory
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Flag\ControlFactory
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\LanguageSelector\ControlFactory
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Title\ControlFactory
+	  inject: true

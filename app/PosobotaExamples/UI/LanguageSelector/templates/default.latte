@@ -1,0 +1,11 @@
+{varType array $available}
+{varType Wavevision\PropsControl\Helpers\ClassName $className}
+{varType string $current}
+<ul n:class="$className->block(), list-unstyled" n:inner-foreach="$available as $iso">
+	<li n:class="$className->element('language')">
+		<a n:class="$className->element('iso', $iso === $current ? 'current' : null)" n:href="select!, $iso">
+			{control flag, [iso => $iso]}
+			{$iso}
+		</a>
+	</li>
+</ul>

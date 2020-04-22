@@ -10,6 +10,9 @@ all:
 
 # Setup
 
+autoload:
+	composer dump-autoload
+
 build: composer yarn yarn_build
 
 composer:
@@ -24,10 +27,9 @@ yarn_build:
 rm-cache:
 	rm -rf $(temp)/cache
 
-reset: rm-cache
-	composer dumpautoload
+reset: rm-cache autoload
 
-di:
+di: reset
 	bin/extract-services
 
 fix: check-syntax phpcbf phpcs phpstan

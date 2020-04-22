@@ -4,11 +4,11 @@ namespace Wavevision\PosobotaExamples\Presenters;
 
 use Nette\Application\UI\Presenter;
 use Nette\Bridges\ApplicationLatte\Template;
-use Wavevision\NamespaceTranslator\TranslatedComponent;
 use Wavevision\NetteWebpack\InjectResolveEntryChunks;
 use Wavevision\NetteWebpack\UI\Components\Assets\AssetsComponent;
-use Wavevision\PosobotaExamples\Presenters\Translations\Translation;
+use Wavevision\PosobotaExamples\Language\InjectLocaleManager;
 use Wavevision\PosobotaExamples\Webpack\Entries;
+use Wavevision\PropsControl\Helpers\ClassName;
 
 /**
  * @property Template $template
@@ -17,8 +17,13 @@ abstract class BasePresenter extends Presenter
 {
 
 	use AssetsComponent;
+	use InjectLocaleManager;
 	use InjectResolveEntryChunks;
-	use TranslatedComponent;
+
+	/**
+	 * @persistent
+	 */
+	public ?string $locale = null;
 
 	protected function beforeRender(): void
 	{
@@ -30,8 +35,8 @@ abstract class BasePresenter extends Presenter
 			->template
 			->setParameters(
 				[
-					'locale' => $this->translator->getTranslator()->getLocale(),
-					'title' => $this->translator->translate(Translation::TITLE),
+					'documentClassName' => new ClassName('document'),
+					'locale' => $this->localeManager->current(),
 				]
 			);
 	}
