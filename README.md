@@ -11,8 +11,6 @@ Source codes for [Posobota live stream talk](https://www.youtube.com/watch?v=i7a
 
 ## Installation
 
-PHP 7.4 is required.
-
 ```bash
 git clone git@github.com:wavevision/posobota-examples.git
 cd posobota-examples

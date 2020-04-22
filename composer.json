@@ -38,6 +38,7 @@
     "nette/bootstrap": "^3.0",
     "wavevision/latte-filters": "^1.1",
     "wavevision/namespace-translator": "^0.2.2",
+    "wavevision/nette-tests": "^3.1",
     "wavevision/nette-webpack": "^0.7.0",
     "wavevision/props-control": "^5.0",
     "wavevision/utils": "^2.9"

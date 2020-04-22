@@ -7,6 +7,8 @@ dirs:=$(app)
 php=php
 temp=temp
 yarn:=$(shell command -v yarn 2>/dev/null)
+phpunit=vendor/bin/phpunit
+coverage=$(temp)/coverage/php
 
 all:
 	 @$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
@@ -27,7 +29,7 @@ config:
 di: reset
 	bin/extract-services
 
-fix: check-syntax phpcbf phpcs phpstan
+fix: check-syntax phpcbf phpcs phpstan test
 
 init: nvm build config
 	@echo "Done! Navigate your browser to 'www' folder."
@@ -46,7 +48,7 @@ npm_build:
 	$(MAKE) script='run build' npm
 
 nvm:
-	source ${NVM_DIR}/nvm.sh && nvm install
+	. ${NVM_DIR}/nvm.sh && nvm install
 
 reset: rm-cache autoload
 
@@ -66,3 +68,14 @@ phpcs:
 
 phpstan:
 	$(bin)/phpstan analyze $(dirs) --level max
+
+# tests
+
+test:
+	$(phpunit)
+
+test-coverage:
+	$(phpunit) --coverage-html=$(coverage)
+
+test-coverage-open: test-coverage
+	google-chrome $(coverage)/index.html
