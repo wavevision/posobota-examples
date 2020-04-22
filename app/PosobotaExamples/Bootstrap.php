@@ -23,10 +23,9 @@ final class Bootstrap
 	public static function createConfigurator(): Configurator
 	{
 		$configurator = new Configurator();
-		$rootDir = self::rootDir();
 		$configurator
 			->setTimeZone('Europe/Prague')
-			->setTempDirectory($rootDir->string('temp'))
+			->setTempDirectory(self::rootDir()->string('temp'))
 			->addConfig(self::configDir()->string('common.neon'));
 		return $configurator;
 	}
