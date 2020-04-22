@@ -24,6 +24,11 @@ composer:
 config:
 	cp -n $(config_example) $(config_app)
 
+di: reset
+	bin/extract-services
+
+fix: check-syntax phpcbf phpcs phpstan
+
 init: build config
 	@echo "Done! Navigate your browser to 'www' folder."
 
@@ -40,26 +45,21 @@ npm_install:
 npm_build:
 	$(MAKE) script='run build' npm
 
-rm-cache:
-	rm -rf $(temp)/cache
-
 reset: rm-cache autoload
 
-di: reset
-	bin/extract-services
-
-fix: check-syntax phpcbf phpcs phpstan
+rm-cache:
+	rm -rf $(temp)/cache
 
 # QA
 
 check-syntax:
 	$(bin)/parallel-lint -e $(php) $(dirs)
 
-phpcs:
-	$(bin)/phpcs -sp --standard=$(codeSnifferRuleset) --extensions=php $(dirs)
-
 phpcbf:
 	$(bin)/phpcbf -spn --standard=$(codeSnifferRuleset) --extensions=php $(dirs)
+
+phpcs:
+	$(bin)/phpcs -sp --standard=$(codeSnifferRuleset) --extensions=php $(dirs)
 
 phpstan:
 	$(bin)/phpstan analyze $(dirs) --level max
