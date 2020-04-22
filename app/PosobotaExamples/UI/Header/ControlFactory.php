@@ -1,6 +1,6 @@
 <?php declare (strict_types = 1);
 
-namespace Wavevision\PosobotaExamples\UI\AppTitle;
+namespace Wavevision\PosobotaExamples\UI\Header;
 
 interface ControlFactory
 {

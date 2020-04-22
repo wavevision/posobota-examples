@@ -1,8 +1,12 @@
 # Generated file, do not modify directly!
 services:
-	- implement: Wavevision\PosobotaExamples\UI\AppTitle\ControlFactory
+	- factory: Wavevision\PosobotaExamples\UI\Favicon\Builder
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Favicon\ControlFactory
 	  inject: true
 	- implement: Wavevision\PosobotaExamples\UI\Flag\ControlFactory
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Header\ControlFactory
 	  inject: true
 	- implement: Wavevision\PosobotaExamples\UI\LanguageSelector\ControlFactory
 	  inject: true

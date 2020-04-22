@@ -21,8 +21,7 @@ final class Control extends BaseControl
 
 	public function handleSelect(string $iso): void
 	{
-		$this->presenter->locale = $iso;
-		$this->presenter->redirect('this');
+		$this->localeManager->change($this->presenter, $iso);
 	}
 
 	public function render(): void

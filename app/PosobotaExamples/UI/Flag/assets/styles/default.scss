@@ -1,0 +1,8 @@
+$flag-size: 1.5em;
+
+.flag {
+  display: inline-block;
+  height: $flag-size;
+  margin-right: 0.25em;
+  width: $flag-size;
+}

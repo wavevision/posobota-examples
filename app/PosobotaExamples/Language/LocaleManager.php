@@ -4,6 +4,7 @@ namespace Wavevision\PosobotaExamples\Language;
 
 use Nette\SmartObject;
 use Wavevision\DIServiceAnnotation\DIService;
+use Wavevision\PosobotaExamples\Presenters\BasePresenter;
 
 /**
  * @DIService(generateInject=true)
@@ -20,6 +21,13 @@ class LocaleManager
 	public function available(): array
 	{
 		return $this->translator->getLocalesWhitelist() ?? [];
+	}
+
+	public function change(BasePresenter $presenter, string $iso): void
+	{
+		$this->translator->setLocale($iso);
+		$presenter->locale = $this->current();
+		$presenter->redirect('this');
 	}
 
 	public function current(): string

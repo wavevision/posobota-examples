@@ -5,6 +5,21 @@ import { RuleSetRule } from 'webpack';
 
 export default (): RuleSetRule[] => [
   {
+    test: /\.png$/,
+    use: [
+      {
+        loader: 'file-loader',
+        options: {
+          esModule: false,
+          name: '[name].[ext]?[hash]',
+        },
+      },
+      {
+        loader: 'image-webpack-loader',
+      },
+    ],
+  },
+  {
     test: /\.svg$/,
     use: [
       {

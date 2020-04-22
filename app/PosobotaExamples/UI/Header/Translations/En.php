@@ -1,6 +1,6 @@
 <?php declare (strict_types = 1);
 
-namespace Wavevision\PosobotaExamples\UI\AppTitle\Translations;
+namespace Wavevision\PosobotaExamples\UI\Header\Translations;
 
 class En extends Translation
 {

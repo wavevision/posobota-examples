@@ -7,6 +7,7 @@ use Nette\Bridges\ApplicationLatte\Template;
 use Wavevision\NetteWebpack\InjectResolveEntryChunks;
 use Wavevision\NetteWebpack\UI\Components\Assets\AssetsComponent;
 use Wavevision\PosobotaExamples\Language\InjectLocaleManager;
+use Wavevision\PosobotaExamples\UI\Favicon\FaviconComponent;
 use Wavevision\PosobotaExamples\Webpack\Entries;
 use Wavevision\PropsControl\Helpers\ClassName;
 
@@ -17,6 +18,7 @@ abstract class BasePresenter extends Presenter
 {
 
 	use AssetsComponent;
+	use FaviconComponent;
 	use InjectLocaleManager;
 	use InjectResolveEntryChunks;
 

@@ -2,11 +2,11 @@
 
 namespace Wavevision\PosobotaExamples\Presenters;
 
-use Wavevision\PosobotaExamples\UI\AppTitle\AppTitleComponent;
+use Wavevision\PosobotaExamples\UI\Header\HeaderComponent;
 
 final class AppPresenter extends BasePresenter
 {
 
-	use AppTitleComponent;
+	use HeaderComponent;
 
 }
