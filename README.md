@@ -3,7 +3,7 @@
 
 Source codes for [Posobota live stream talk](https://www.youtube.com/watch?v=i7a_4wSacAQ).
 
-💡&ensp;**Topic:** The [Wavevision](https//github.com/wavevision) ecosystem of [Nette](https://github.com/nette) libraries
+💡&ensp;**Topic:** The [Wavevision](https://github.com/wavevision) ecosystem of [Nette](https://github.com/nette) libraries
 <br>
 👤&ensp;**Authors:** [Jakub Filla](https://github.com/jfilla), [Vít Rozsíval](https://github.com/rozsival)
 <br>
