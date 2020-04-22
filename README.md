@@ -18,9 +18,6 @@ git clone git@github.com:wavevision/posobota-examples.git
 make init
 ```
 
-> **Note:** For ease of use the project contains lock files for both `npm` and `yarn`.<br>
-> The `init` command will prefer `yarn`, but will use `npm` if `yarn` is not installed on your system.
-
 ## Development
 
 Use `app/config/local.neon` to customize your setup. Then, start `webpack-dev-server`.
