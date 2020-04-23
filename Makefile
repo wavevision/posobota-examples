@@ -89,3 +89,4 @@ test-coverage-report:
 	${bin}/php-coveralls --coverage_clover=$(coverageClover) --verbose
 
 ci: build config check-syntax phpcs phpcbf test-coverage-clover test-coverage-report
+
