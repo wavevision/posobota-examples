@@ -20,7 +20,7 @@ all:
 autoload:
 	composer dump-autoload
 
-build: composer npm npm_build
+build: composer npm-install npm-build
 
 composer:
 	composer install
@@ -43,10 +43,10 @@ else
 	yarn $(script)
 endif
 
-npm_install:
+npm-install:
 	$(MAKE) script=install npm
 
-npm_build:
+npm-build:
 	$(MAKE) script='run build' npm
 
 nvm:
