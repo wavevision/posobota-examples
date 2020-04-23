@@ -11,13 +11,22 @@ use Wavevision\PosobotaExamples\Models\CurrencyRateFeed;
 class CurrencyRateFeedMock extends CurrencyRateFeed
 {
 
+	/**
+	 * @var array<mixed>
+	 */
 	private array $mock;
 
+	/**
+	 * @param array<mixed> $mock
+	 */
 	public function setMock(array $mock): void
 	{
 		$this->mock = $mock;
 	}
 
+	/**
+	 * @return array<mixed>
+	 */
 	public function get(): array
 	{
 		return $this->mock;

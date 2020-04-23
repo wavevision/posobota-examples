@@ -1,9 +1,10 @@
 app=app
+tests=tests
 bin=vendor/bin
 config_app=$(app)/config/local.neon
 config_example=$(app)/config/local.example.neon
 codeSnifferRuleset=codesniffer-ruleset.xml
-dirs:=$(app)
+dirs:=$(app) $(tests)
 php=php
 temp=temp
 yarn:=$(shell command -v yarn 2>/dev/null)
