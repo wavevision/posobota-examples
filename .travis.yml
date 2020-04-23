@@ -3,6 +3,7 @@ dist: xenial
 language: php
 
 php: 7.4
+node_js: 12.16.1
 
 git:
   depth: 1
