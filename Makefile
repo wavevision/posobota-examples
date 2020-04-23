@@ -1,16 +1,16 @@
 app=app
 tests=tests
 bin=vendor/bin
+codeSnifferRuleset=codesniffer-ruleset.xml
 config_app=$(app)/config/local.neon
 config_example=$(app)/config/local.example.neon
-codeSnifferRuleset=codesniffer-ruleset.xml
+coverage=$(temp)/coverage
+coverageClover=$(coverage)/coverage.xml
 dirs:=$(app) $(tests)
 php=php
+phpunit=vendor/bin/phpunit
 temp=temp
 yarn:=$(shell command -v yarn 2>/dev/null)
-phpunit=vendor/bin/phpunit
-coverage=$(temp)/coverage/php
-coverageClover=$(coverage)/coverage.xml
 
 all:
 	 @$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
@@ -89,5 +89,4 @@ test-coverage-report:
 	${bin}/php-coveralls --coverage_clover=$(coverageClover) --verbose
 
 ci: build config check-syntax phpcs phpstan test-coverage-clover test-coverage-report
-
 

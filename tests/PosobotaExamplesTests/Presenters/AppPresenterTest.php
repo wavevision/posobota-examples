@@ -38,7 +38,7 @@ class AppPresenterTest extends PresenterTestCase
 				new PresenterRequest(AppPresenter::class, 'default', ['locale' => 'cs', Factory::KEYWORD => 'loop'])
 			)
 		);
-		$this->assertStringContainsString('Searching for loop', $responseContent);
+		$this->assertStringContainsString('Vyhledávání: loop', $responseContent);
 		$this->assertStringContainsString('Chuck Norris went out of an infinite loop.', $responseContent);
 	}
 

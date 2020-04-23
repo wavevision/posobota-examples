@@ -19,9 +19,10 @@ class Control extends BaseControl
 		$this->template->render();
 	}
 
-	public function createComponentForm(): Form
+	protected function createComponentForm(): Form
 	{
 		$form = $this->factory->create();
+		$form->setDefaults([Factory::KEYWORD => $this->presenter->getParameter(Factory::KEYWORD)]);
 		$form->onSuccess[] = function (Form $form): void {
 			$this->presenter->redirect('this', [Factory::KEYWORD => $form->getValues()[Factory::KEYWORD]]);
 		};

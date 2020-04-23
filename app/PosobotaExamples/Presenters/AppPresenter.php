@@ -3,6 +3,7 @@
 namespace Wavevision\PosobotaExamples\Presenters;
 
 use Nette\Bridges\ApplicationLatte\Template;
+use Wavevision\NamespaceTranslator\TranslatedComponent;
 use Wavevision\PosobotaExamples\Components\SearchForm\SearchFormComponent;
 use Wavevision\PosobotaExamples\Models\InjectFilteredJokes;
 use Wavevision\PosobotaExamples\UI\Header\HeaderComponent;
@@ -14,13 +15,20 @@ final class AppPresenter extends BasePresenter
 {
 
 	use HeaderComponent;
-	use SearchFormComponent;
 	use InjectFilteredJokes;
+	use SearchFormComponent;
+	use TranslatedComponent;
 
 	public function actionDefault(?string $keyword): void
 	{
-		$this->template->search = sprintf('Searching for %s', $keyword);
-		$this->template->jokes = $this->filteredJokes->get($keyword);
+		$this
+			->template
+			->setParameters(
+				[
+					'jokes' => $this->filteredJokes->get($keyword),
+					'keyword' => $keyword,
+				]
+			);
 	}
 
 }
