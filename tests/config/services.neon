@@ -1,0 +1,5 @@
+# Generated file, do not modify directly!
+services:
+	currencyRateFeed:
+	  factory: Wavevision\PosobotaExamplesTests\Models\CurrencyRateFeedMock
+	  inject: true

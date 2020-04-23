@@ -1,4 +1,8 @@
 {block content}
 {control header}
 
-<a n:href="Form:">form</a>
+<div>{$search}</div>
+<div>{control searchForm}</div>
+
+
+<p n:foreach="$jokes as $joke">{$joke}</p>

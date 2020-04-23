@@ -4,6 +4,7 @@
 use Wavevision\DIServiceAnnotation\Configuration;
 use Wavevision\DIServiceAnnotation\Runner;
 use Wavevision\PosobotaExamples\Bootstrap;
+use Wavevision\PosobotaExamplesTests\Bootstrap as TestBootstrap;
 
 require __DIR__ . '/../vendor/autoload.php';
 Runner::run(
@@ -14,5 +15,6 @@ Runner::run(
 		[
 			'Wavevision\\PosobotaExamples\\UI' => Bootstrap::configDir()->string('ui.neon'),
 		]
-	)
+	),
+	(new Configuration((string)TestBootstrap::testsDir(), TestBootstrap::servicesConfig()))
 );

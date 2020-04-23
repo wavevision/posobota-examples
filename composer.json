@@ -24,7 +24,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Wavevision\\PosobotaExamplesTests\\": "tests/PosobotaExamplesTests/"
+      "Wavevision\\": "tests/"
     }
   },
   "config": {

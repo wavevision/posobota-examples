@@ -16,3 +16,6 @@ includes:
 	- translation.neon
 	- webpack.neon
 	- ui.neon
+
+parameters:
+	currencyRateFeed: http://www.floatrates.com/daily/eur.json

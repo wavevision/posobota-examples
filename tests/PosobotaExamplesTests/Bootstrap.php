@@ -11,8 +11,9 @@ final class Bootstrap
 
 	public static function boot(): Configurator
 	{
-		$rootDir = Path::create(__DIR__, '..', '..');
+		$rootDir = self::rootDir();
 		$configurator = AppBootstrap::createConfigurator();
+		$configurator->addConfig(self::servicesConfig());
 		$configurator->addParameters(
 			[
 				'tempDir' => $rootDir->string('temp'),
@@ -20,6 +21,21 @@ final class Bootstrap
 			]
 		);
 		return $configurator;
+	}
+
+	public static function rootDir(): Path
+	{
+		return Path::create(__DIR__, '..', '..');
+	}
+
+	public static function testsDir(): Path
+	{
+		return self::rootDir()->path('tests');
+	}
+
+	public static function servicesConfig(): string
+	{
+		return self::testsDir()->string('config', 'services.neon');
 	}
 
 }
