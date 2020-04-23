@@ -10,7 +10,7 @@ git:
 
 jobs:
   include:
-    - script:
+    - script: make ci
 
 cache:
   directories:
