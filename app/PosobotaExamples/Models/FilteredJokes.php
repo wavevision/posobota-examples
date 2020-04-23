@@ -2,6 +2,7 @@
 
 namespace Wavevision\PosobotaExamples\Models;
 
+use Nette\SmartObject;
 use Wavevision\DIServiceAnnotation\DIService;
 use Wavevision\Utils\Arrays;
 use Wavevision\Utils\Strings;
@@ -12,6 +13,7 @@ use Wavevision\Utils\Strings;
 class FilteredJokes
 {
 
+	use SmartObject;
 	use InjectJokes;
 
 	/**

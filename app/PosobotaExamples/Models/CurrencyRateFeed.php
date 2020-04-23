@@ -2,15 +2,20 @@
 
 namespace Wavevision\PosobotaExamples\Models;
 
+use Nette\SmartObject;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use Wavevision\DIServiceAnnotation\DIService;
 
 /**
- * @DIService(generateInject=true, name="currencyRateFeed", params={"%currencyRateFeed%"})
+ * @DIService(generateInject=true, name=CurrencyRateFeed::SERVICE, params={"%currencyRateFeed%"})
  */
 class CurrencyRateFeed
 {
+
+	use SmartObject;
+
+	public const SERVICE = 'currencyRateFeed';
 
 	private string $url;
 

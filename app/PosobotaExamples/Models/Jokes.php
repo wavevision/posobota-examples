@@ -2,6 +2,7 @@
 
 namespace Wavevision\PosobotaExamples\Models;
 
+use Nette\SmartObject;
 use Nette\Utils\FileSystem;
 use Nette\Utils\Json;
 use Wavevision\DIServiceAnnotation\DIService;
@@ -11,6 +12,8 @@ use Wavevision\DIServiceAnnotation\DIService;
  */
 class Jokes
 {
+
+	use SmartObject;
 
 	/**
 	 * @return array<mixed>

@@ -6,7 +6,7 @@ use Wavevision\DIServiceAnnotation\DIService;
 use Wavevision\PosobotaExamples\Models\CurrencyRateFeed;
 
 /**
- * @DIService(generateInject=true, name="currencyRateFeed")
+ * @DIService(generateInject=true, name=CurrencyRateFeed::SERVICE)
  */
 class CurrencyRateFeedMock extends CurrencyRateFeed
 {
