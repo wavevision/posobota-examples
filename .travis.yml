@@ -14,8 +14,6 @@ cache:
 
 install:
   - nvm install
-  - yarn install
-  - composer install
 
 jobs:
   include:
