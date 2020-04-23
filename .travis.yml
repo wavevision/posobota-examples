@@ -1,0 +1,17 @@
+os: linux
+dist: xenial
+language: php
+
+php: 7.4
+
+git:
+  depth: 1
+
+
+jobs:
+  include:
+    - script:
+
+cache:
+  directories:
+    - $HOME/.composer/cache

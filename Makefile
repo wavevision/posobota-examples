@@ -10,6 +10,7 @@ temp=temp
 yarn:=$(shell command -v yarn 2>/dev/null)
 phpunit=vendor/bin/phpunit
 coverage=$(temp)/coverage/php
+coverageClover=$(coverage)/coverage.xml
 
 all:
 	 @$(MAKE) -pRrq -f $(lastword $(MAKEFILE_LIST)) : 2>/dev/null | awk -v RS= -F: '/^# File/,/^# Finished Make data base/ {if ($$1 !~ "^[#.]") {print $$1}}' | sort | egrep -v -e '^[^[:alnum:]]' -e '^$@$$'
@@ -80,3 +81,11 @@ test-coverage:
 
 test-coverage-open: test-coverage
 	google-chrome $(coverage)/index.html
+
+test-coverage-clover:
+	$(phpunit) --coverage-clover=$(coverageClover)
+
+test-coverage-report:
+	${bin}/php-coveralls --coverage_clover=$(coverageClover) --verbose
+
+ci: build config check-syntax phpcs phpcbf test-coverage-clover test-coverage-report
