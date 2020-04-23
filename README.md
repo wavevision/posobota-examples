@@ -1,6 +1,11 @@
 <p align="center"><a href="https://github.com/wavevision"><img alt="Wavevision s.r.o." src="https://wavevision.com/images/wavevision-logo.png" width="120" /></a></p>
 <h1 align="center">Posobota Examples</h1>
 
+
+[![Build Status](https://travis-ci.org/wavevision/posobota-examples.svg?branch=master)](https://travis-ci.org/wavevision/posobota-examples.svg?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/wavevision/nette-tests/posobota-examples.svg?branch=master)](https://coveralls.io/github/wavevision/posobota-examples.svg?branch=master)
+[![PHPStan](https://img.shields.io/badge/style-level%20max-brightgreen.svg?label=phpstan)](https://github.com/phpstan/phpstan)
+
 Source codes for [Posobota live stream talk](https://www.youtube.com/watch?v=i7a_4wSacAQ).
 
 💡&ensp;**Topic:** The [Wavevision](https://github.com/wavevision) ecosystem of [Nette](https://github.com/nette) libraries
