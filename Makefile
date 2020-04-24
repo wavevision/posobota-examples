@@ -1,5 +1,4 @@
 app=app
-tests=tests
 bin=vendor/bin
 codeSnifferRuleset=codesniffer-ruleset.xml
 config_app=$(app)/config/local.neon
@@ -8,8 +7,9 @@ coverage=$(temp)/coverage
 coverageClover=$(coverage)/coverage.xml
 dirs:=$(app) $(tests)
 php=php
-phpunit=vendor/bin/phpunit
+phpunit=$(bin)/phpunit
 temp=temp
+tests=tests
 yarn:=$(shell command -v yarn 2>/dev/null)
 
 all:
