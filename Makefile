@@ -1,5 +1,6 @@
 app=app
 bin=vendor/bin
+chrome:=$(shell command -v google-chrome 2>/dev/null)
 codeSnifferRuleset=codesniffer-ruleset.xml
 config_app=$(app)/config/local.neon
 config_example=$(app)/config/local.example.neon
@@ -79,11 +80,15 @@ test:
 test-coverage:
 	$(phpunit) --coverage-html=$(coverage)
 
-test-coverage-open: test-coverage
-	google-chrome $(coverage)/index.html
-
 test-coverage-clover:
 	$(phpunit) --coverage-clover=$(coverageClover)
+
+test-coverage-open: test-coverage
+ifndef chrome
+	open -a 'Google Chrome' $(coverage)/index.html
+else
+	google-chrome $(coverage)/index.html
+endif
 
 test-coverage-report:
 	${bin}/php-coveralls --coverage_clover=$(coverageClover) --verbose
