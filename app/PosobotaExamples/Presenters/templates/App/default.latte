@@ -1,5 +1,6 @@
 {varType array $jokes}
 {varType string $keyword}
+{varType Wavevision\PosobotaExamples\UI\Text\TextProps $text}
 {block content}
 {control header}
 <h2 class="h2">{='searching'|translate}: {$keyword}</h2>
@@ -7,3 +8,4 @@
 <ul class="list-group" n:inner-foreach="$jokes as $joke">
 	<li class="list-group-item">{$joke}</li>
 </ul>
+{control text, $text}

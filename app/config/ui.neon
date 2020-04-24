@@ -10,5 +10,9 @@ services:
 	  inject: true
 	- implement: Wavevision\PosobotaExamples\UI\LanguageSelector\ControlFactory
 	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Text\ControlFactory
+	  inject: true
+	- implement: Wavevision\PosobotaExamples\UI\Text\Paragraph\ControlFactory
+	  inject: true
 	- implement: Wavevision\PosobotaExamples\UI\Title\ControlFactory
 	  inject: true

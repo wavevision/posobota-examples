@@ -4934,16 +4934,16 @@
         },
         {
             "name": "wavevision/coding-standard",
-            "version": "4.0.0",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wavevision/coding-standard.git",
-                "reference": "d34e68689c30a69e98011602729bfe19e1f9cb0a"
+                "reference": "046a7a0fc1b87c01316ccd4dda2027e11fa45409"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wavevision/coding-standard/zipball/d34e68689c30a69e98011602729bfe19e1f9cb0a",
-                "reference": "d34e68689c30a69e98011602729bfe19e1f9cb0a",
+                "url": "https://api.github.com/repos/wavevision/coding-standard/zipball/046a7a0fc1b87c01316ccd4dda2027e11fa45409",
+                "reference": "046a7a0fc1b87c01316ccd4dda2027e11fa45409",
                 "shasum": ""
             },
             "require": {
@@ -4988,7 +4988,7 @@
             ],
             "description": "The Wavevision PHP coding standard.",
             "homepage": "https://github.com/wavevision/coding-standard",
-            "time": "2020-04-07T11:52:31+00:00"
+            "time": "2020-04-23T15:24:30+00:00"
         },
         {
             "name": "wavevision/di-service-annotation",
