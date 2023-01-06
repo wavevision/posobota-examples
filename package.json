@@ -51,7 +51,7 @@
     "sass-loader": "^8.0.2",
     "stylelint": "^13.3.3",
     "stylelint-webpack-plugin": "^1.2.3",
-    "svg-sprite-loader": "^4.2.5",
+    "svg-sprite-loader": "^6.0.11",
     "terser-webpack-plugin": "^2.3.5",
     "ts-loader": "^7.0.1",
     "ts-node": "^8.9.0",
